@@ -4,9 +4,8 @@
     v-if="$slidev.nav.currentLayout !== 'cover'"
     class="absolute bottom-0 left-0 right-0 p-1"
   >
-    <!-- <img src="images/hiit.png" style="width:90px;height:40px;" /> -->
-    <logos-twitter /> alliwene
-    <logos-github-octocat /> alliwene
-
+    <img src="images/hiit.png" style="width:150px;height:40px;" />
+    <!-- <logos-twitter /> alliwene
+    <logos-github-octocat /> alliwene -->
   </footer>
 </template>
