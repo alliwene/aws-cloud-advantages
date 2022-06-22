@@ -100,7 +100,7 @@ title: Amazon CloudWatch
 # Amazon CloudWatch Actions
 
 <figure>
-  <img src="images/cloudwatch-actions.png" alt="AWS Market Share" style="width:100%;height:400px;">
+  <img src="images/cloudwatch-actions.png" style="width:100%;height:400px;">
 </figure>
 
 
