@@ -186,46 +186,131 @@ Week 6.5
 
 ---
 
-# Amazon RDS Read Replicas
+# Amazon RDS Read Replicas and Scaling 
+
+<figure>
+    <img src="images/read_replicas.png" style="width:100%;height:400px;">
+</figure>
+
+---
+
+# Amazon RDS Read Replicas and Scaling 
+
+<v-clicks> 
+
+* Amazon RDS read replicas provide enhanced performance and durability for RDS DB instances. 
+* They make it easy to elastically scale out beyond the capacity constraints of a single DB instance for read-heavy database workloads. 
+* Updates to the source DB instance are asynchronously copied to the read replica instance. 
+* You can reduce the load on your source DB instance by routing read queries from your applications to the read replica. 
+* Read replicas can be promoted to become the primary DB instance. 
+* However, because it uses asynchronous replication, this option requires manual action.
+
+</v-clicks>
+
+
+---
+
+# Amazon RDS Read Replicas and Scaling 
+
+<v-clicks> 
+
+* Read replicas can be created in a different Region from the primary DB instance. 
+* This feature can help satisfy disaster recovery (DR) requirements or reduce latency by directing reads to a read replica in a geographic area that is closer to the user.
+* For more information see [Amazon RDS Read Replicas](https://aws.amazon.com/rds/features/read-replicas/)
+
+</v-clicks>
+
+
+---
+
+# Scaling your Amazon RDS Instance 
+
+<v-clicks> 
+
+* As discussed earlier, Amazon RDS takes care of scaling your relational database so your database can keep up with the increasing demands of your applications.
+* You can scale your RDS instance **vertically** by adding more capacity to the storage and computing of your current RDS instance. 
+* Or scale **horizontally** by adding additional RDS instances for reads and writes.
+
+</v-clicks>
+
+
+
+---
+
+# Vertical Scaling
+
+<v-clicks> 
+
+* Vertical scaling is the most straightforward approach to adding more capacity to your database. 
+* Vertical scaling is suitable if you can’t change your application and database connectivity configuration. 
+* You can vertically scale up your RDS instance with a click of a button. 
+* Several instance sizes are available, from general-purpose to CPU and memory-optimized.
+*  Instance types have combinations of CPU, memory, storage, and networking capacity, and give you the flexibility to choose the appropriate mix of resources for your database. 
+*  In addition, each instance type includes several instance sizes, which allows you to scale your database to the requirements of your target workload.
+* For more information about DB instance classes, see [DB instance classes](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html).
+
+</v-clicks>
+
+
+---
+
+# Horizontal Scaling
+
+<v-clicks> 
+
+* Horizontal scaling increases performance by extending the database operations to additional nodes. 
+* You can choose this option if you need to scale beyond the capacity of a single DB instance. 
+* An advantage of horizontally scaling in Amazon RDS is that AWS handles the infrastructure management, provisioning, and configuration of additional nodes. 
+* You can easily create additional nodes from the Amazon RDS console or API.
+
+</v-clicks>
+
+
+---
+
+# When to use Amazon RDS 
+
+| **When to use Amazon RDS**  | **When NOT to use Amazon RDS**  | 
+|--------------|-----|
+| Your aplication requires complex transactions or complex queries|  Simple GET or PUT requests and queries that a NoSQL database can handle | 
+| Build highly durable database solutions  |  Relational database management system (RDBMS) customization |         
+
+<v-clicks> 
+
+* For circumstances where you should not use Amazon RDS, you can use a NoSQL database solution, such as DynamoDB. 
+* Another alternative to Amazon RDS is to run your relational database engine on Amazon EC2 instances, which will provide more options for customizing your database.
+
+</v-clicks>
+
+
+---
+
+# Amazon RDS Best Practices
 
 <v-clicks>
 
-* Understand how internal operations gain compliance on AWS.
-* Access to recommended training, self-paced labs, and auditing resources from the compliance website.
-* For more information, refer to the [Cloud Audit Academy](https://aws.amazon.com/professional-services/) learning path.
-  
-</v-clicks>
-
-
----
-
-# AWS Compliance Solutions Guide 
-
-<v-clicks> 
-
-* Access frequently used resources and processes, using the AWS Compliance Solutions Guide.
-*  Learn about the available compliance solutions, such as 
-   *  Understanding the shared responsibility model 
-   *  Requesting a compliance report 
-   *  Completing a security questionnaire
-
+* Some recommended practices for RDS include:
+* Enable automatic backups, and set the backup window to occur during a time when you have minimal write operations to the database.
+* If you use a Multi-AZ deployment, test the failover for your DB instance to understand how long it takes to complete the switch-over. 
+* Verify that your application can successfully access the new primary DB instance.
+* For more information about best practices for Amazon RDS, see [Best practices for Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_BestPractices.html).
 
 </v-clicks>
 
 
 ---
 
-# More AWS Compliance Resources
+# Amazon RDS Use Cases
 
-<v-clicks> 
+<v-clicks>
 
-* More AWS compliance resources include: 
-* **Services in Scope** – Details about which services are currently in scope and which are in progress.
-* **AWS Security Blog** – The blog is a good way to learn about the newest updates to AWS security programs.
-*  **Case Studies** – Provide insightful information on some of the AWS current customer experiences with security.
-*  To learn more, refer to [Compliance Resource](https://aws.amazon.com/compliance/resources/)
+* Amazon RDS works well for web and mobile applications that need a database with high throughput, extensive storage scalability, and high availability. 
+* Because Amazon RDS does not have any licensing constraints, it fits the variable usage pattern of these applications. 
+* For small and large e-commerce businesses, Amazon RDS provides a flexible, secured, and low-cost database solution for online sales and retailing. 
+* Amazon RDS manages the database infrastructure, so developers do not need to worry about provisioning, scaling, or monitoring database servers.
 
 </v-clicks>
+
 
 ---
 
@@ -233,12 +318,9 @@ Week 6.5
 
 <v-clicks>
 
-*  Different types of available security resources include:
-   * AWS account teams 
-   * AWS Enterprise Support 
-   * AWS Professional Services and the AWS Partner Network (APN) 
-   * AWS advisories and bulletins  
-   * AWS auditor learning path 
-   * AWS compliance solutions guide
+* Amazon RDS is a database service that makes it easy to set up, operate, and scale a relational database in the cloud.
+* As a managed service, Amazon RDS is accessible by using the console, the AWS CLI, or application programming interface (API) calls.
+* Amazon RDS offers features for automated redundancy and backups.
+* Amazon RDS supports an array of database engines, which includes Amazon Aurora, PostgreSQL, MySQL, MariaDB, Oracle Database, and Microsoft SQL Server.
 
 </v-clicks>
