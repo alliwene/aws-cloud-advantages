@@ -355,7 +355,7 @@ title: AWS Well-Architected Framework
 * Some design principles for performance efficiency in the cloud include:
   * Democratize advanced technologies.
   * Go global in minutes.
-  * Use a serverless architecture.
+  * Use serverless architectures.
   * Experiment more often. 
   * Have mechanical sympathy.
 * Democratize advanced technologies
@@ -373,7 +373,7 @@ title: AWS Well-Architected Framework
 
 * Go global in minutes
   *  With AWS, you can easily deploy your system in multiple AWS Regions around the world while providing lower latency and a better experience for your customers at a minimal cost.
-* Use a serverless architecture
+* Use serverless architectures
   * Serverless computing is a cloud computing runtime model where the cloud provider dynamically manages the allocation of machine resources. 
   * Pricing is based on the actual amount of resources consumed by an application, instead of on pre-purchased units of capacity. 
   * In the cloud, serverless computing enables you to reduce the need to run and maintain traditional servers for compute activities. 
@@ -391,7 +391,9 @@ title: AWS Well-Architected Framework
 * Experiment more often. 
   * With virtualization, you can quickly carry out testing to enhance efficiency.
 * Have mechanical sympathy. 
+  * Mechanical sympathy is when you use a tool or system with an understanding of how it operates best.
   * This principle suggests that you use the technology approach that best aligns with what you are trying to achieve.
+  * "Understanding how a car works make you a better driver."
 * To learn more refer to the [Performance Efficiency Pillar whitepaper](https://docs.aws.amazon.com/wellarchitected/latest/performance-efficiency-pillar/welcome.html)
 
 </v-clicks>
@@ -489,9 +491,6 @@ title: AWS Well-Architected Framework
 * Analyze and attribute expenditure 
   * With the cloud, it is easier to accurately identify the usage and cost of systems. 
   * Customers can measure their return on investment, which enables them to optimize resources and reduce costs.
-* Use managed services 
-  * Use managed services to reduce the cost of ownership. 
-  * The cloud has many managed services to remove the operational burden of maintaining servers for tasks like sending email messages or managing databases. 
 * To learn more refer to the [Cost Optimization Pillar whitepaper](https://docs.aws.amazon.com/wellarchitected/latest/cost-optimization-pillar/welcome.html)
 
 </v-clicks>
@@ -547,6 +546,7 @@ title: AWS Well-Architected Framework
   * Select the most efficient hardware for your workload.
 * Use managed services 
   * The cloud has many managed services to remove the operational burden of maintaining servers for tasks like sending email messages or managing databases. 
+* To learn more refer to the [Sustainability Pillar whitepaper](https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/sustainability-pillar.html)
 
 </v-clicks>
 
