@@ -1,0 +1,76 @@
+
+
+
+
+
+
+aws ec2 create-subnet --vpc-id vpc-04a3f4e8922899f4d \ 
+--cidr-block 10.0.2.0/24 --availability-zone us-west-2a
+
+aws ec2 describe-subnets \
+--filters "Name=vpc-id,Values=vpc-04a3f4e8922899f4d" 
+
+
+#############################################################
+
+image-id: 
+
+vpc-id: 
+
+IGW: 
+
+route table: 
+
+public subnet: 
+
+private subnet: 
+
+security group: 
+
+instanceid: 
+
+subnet rds: 
+
+
+####################### RDS #################################
+
+# Add ingress for port 5432 postgres in security group
+aws ec2 authorize-security-group-ingress \
+--group-id sg-01a25ba95841f1558 \
+--protocol tcp --port 5432 \
+--cidr 0.0.0.0/0
+
+# Create RDS subnet group 
+aws rds create-db-subnet-group \
+--db-subnet-group-name "DB Subnet Group" \
+--db-subnet-group-description "DB subnet group" \
+--subnet-ids subnet-0344528343a998828 subnet-0585b5fce742774de \
+--tags "Key=Name,Value=DatabaseSubnetGroup"
+
+# Check version for postgresql
+aws rds describe-db-engine-versions --engine postgresql
+
+# To create a publicly accessible DBInstance, specified VPC must support DNS resolution, DNS hostnames, or both.
+aws ec2 modify-vpc-attribute --enable-dns-hostnames Value=true \
+--vpc-id vpc-04a3f4e8922899f4d
+
+# Set db instance with postgres version 12.7
+aws rds create-db-instance \
+--db-instance-identifier DBInstance \
+--engine postgres \
+--engine-version 12.7 \
+--db-instance-class db.t2.micro \
+--allocated-storage 20 \
+--availability-zone us-west-2a \
+--db-subnet-group-name "DB Subnet Group" \
+--vpc-security-group-ids sg-01a25ba95841f1558 \
+--publicly-accessible \
+--master-username hiitstudent --master-user-password 'password'
+
+
+# details of db instance
+aws rds describe-db-instances \
+--db-instance-identifier DBInstance \
+--query "DBInstances[*].[Endpoint.Address,AvailabilityZone,DBInstanceStatus]"
+
+

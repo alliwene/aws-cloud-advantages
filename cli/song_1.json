@@ -1,0 +1,23 @@
+{
+  "Artist": {
+    "S": "Fela Kuti & Egypt 80"
+  },
+  "SongTitle": {
+    "S": "Beasts of No Nation"
+  },
+  "AlbumTitle": {
+    "S": "Beasts of No Nation"
+  },
+  "Price": {
+    "N": "5"
+  },
+  "Genre": {
+    "S": "Afrobeat"
+  },
+  "CriticRating": {
+    "N": "9.7"
+  },
+  "Year": {
+    "N": "1989"
+  }
+}

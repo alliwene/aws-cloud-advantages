@@ -1,0 +1,20 @@
+{
+  "Artist": {
+    "S": "Fela Kuti & Egypt 80"
+  },
+  "SongTitle": {
+    "S": "Coffin for Head of State"
+  },
+  "AlbumTitle": {
+    "S": "Coffin for Head of State"
+  },
+  "Price": {
+    "N": "4.8"
+  },
+  "Genre": {
+    "S": "Afrobeat"
+  },
+  "Year": {
+    "N": "1980"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "Artist": {
+    "S": "Angélique Kidjo"
+  },
+  "SongTitle": {
+    "S": "Agolo"
+  },
+  "AlbumTitle": {
+    "S": "Ayé"
+  },
+  "Genre": {
+    "S": "Electronic"
+  },
+  "CriticRating": {
+    "N": "9.0"
+  },
+  "Year": {
+    "N": "1994"
+  }
+}
