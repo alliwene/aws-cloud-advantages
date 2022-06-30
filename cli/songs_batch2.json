@@ -1,0 +1,20 @@
+{
+    "Music": [
+        {
+            "DeleteRequest": {
+                "Key": {
+                    "Artist": {"S": "Anita Baker"},
+                    "SongTitle": {"S": "Giving You the Best That I Got"}
+                }
+            }
+        },
+        {
+            "DeleteRequest": {
+                "Key": {
+                    "Artist": {"S": "Bon Jovi"},
+                    "SongTitle": {"S": "I'll Be There for You"}   	
+                }
+            }
+        }]
+
+}

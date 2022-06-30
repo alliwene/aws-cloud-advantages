@@ -8,12 +8,29 @@ aws dynamodb create-table \
 # Add an item 
 aws dynamodb put-item --table-name Music --item file://song_1.json
 
+# Add multiple items
+aws dynamodb batch-write-item --request-items file://songs_batch1.json 
+
 # Delete an item 
 aws dynamodb delete-item --table-name Music --key file://keys_to_delete.json
     
-# Query table
+# Query table with keys
 aws dynamodb query --table-name Music --key-condition-expression \
 "Artist = :v1" --expression-attribute-values file://values1.json
 
 aws dynamodb query --table-name Music --key-condition-expression \
 "Artist = :v1 AND SongTitle = :v2" --expression-attribute-values file://values2.json
+
+# All items using scan
+aws dynamodb scan --table-name Music
+
+# Query table with keys and attribute values
+aws dynamodb query --table-name Music --key-condition-expression \
+"Artist = :v1" --filter-expression "ReleasedYear = :v2" \
+--expression-attribute-values file://filter_values1.json 
+
+# Use scan and filter
+aws dynamodb scan --table-name Music --filter-expression "ReleasedYear = :v1" \
+--expression-attribute-values file://filter_values2.json
+
+

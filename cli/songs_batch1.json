@@ -1,0 +1,23 @@
+{
+    "Music": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "Artist": {"S": "Anita Baker"},
+                    "SongTitle": {"S": "Giving You the Best That I Got"},   	
+                    "ReleasedYear": {"N": "1989"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "Artist": {"S": "Bon Jovi"},
+                    "SongTitle": {"S": "I'll Be There for You"}, 
+                    "AlbumTitle": {"S": "New Jersey."}, 
+                    "ReleasedYear": {"N": "1988"}    	
+                }
+            }
+        }]
+
+}
