@@ -1,33 +1,42 @@
+# Create subnets
+aws ec2 create-subnet --vpc-id vpc-0e7d3dfa504a9f548 --cidr-block 10.0.1.0/24
 
-
-
-
-
-
-aws ec2 create-subnet --vpc-id vpc-04a3f4e8922899f4d \ 
---cidr-block 10.0.2.0/24 --availability-zone us-west-2a
-
+# Subnet info
 aws ec2 describe-subnets \
---filters "Name=vpc-id,Values=vpc-04a3f4e8922899f4d" 
+--filters "Name=vpc-id,Values=vpc-0e7d3dfa504a9f548" \
+--query "Subnets[*].{ID:SubnetId,CIDR:CidrBlock,AZ:AvailabilityZone}"
+
+
+
+aws ec2 create-key-pair --key-name hiitclikey --query "KeyMaterial" --output text > hiitclikey.pem 
+
+aws ec2 authorize-security-group-ingress --group-id sg-08d48a4ed5792b804 --protocol tcp --port 3306 --cidr 0.0.0.0/0 
+
+
+aws ec2 run-instances --image-id resolve:ssm:/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2 \
+ --count 1 --instance-type t2.micro --key-name hiitclikey \
+ --security-group-ids sg-08d48a4ed5792b804 --subnet-id subnet-00f13c47d669723d0
+
+
 
 
 #############################################################
 
 image-id: 
 
-vpc-id: 
+vpc-id: vpc-0e7d3dfa504a9f548
 
-IGW: 
+IGW: igw-0151d2d1195d52cbc
 
-route table: 
+route table: rtb-07f14fcc4dbaf1278 
 
-public subnet: 
+public subnet: subnet-00f13c47d669723d0
 
-private subnet: 
+private subnet: subnet-0ab82904a3a2b1188
 
-security group: 
+security group: sg-08d48a4ed5792b804
 
-instanceid: 
+instanceid: i-0b977cb8b0110feab
 
 subnet rds: 
 
@@ -52,7 +61,7 @@ aws rds describe-db-engine-versions --engine postgresql
 
 # To create a publicly accessible DBInstance, specified VPC must support DNS resolution, DNS hostnames, or both.
 aws ec2 modify-vpc-attribute --enable-dns-hostnames Value=true \
---vpc-id vpc-04a3f4e8922899f4d
+--vpc-id vpc-04a3f4e8922899f4d 
 
 # Set db instance with postgres version 12.7
 aws rds create-db-instance \
