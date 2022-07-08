@@ -132,7 +132,8 @@ AWS Lambda and Cloudwatch Events
 * Automated backups. 
 * Processing objects that are uploaded to Amazon S3. 
 * Event-driven log analysis.
-* Event-driven transformations Internet of Things (IoT).
+* Event-driven transformations. 
+* Internet of Things (IoT).
 * Operating serverless websites.
 
 </v-clicks>

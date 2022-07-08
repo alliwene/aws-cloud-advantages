@@ -41,7 +41,7 @@ title: AWS CloudFormation
 
 * The cloud opens up many possibilities. However, it also raises questions about how to manage its power and flexibility, such as:
 * How do you update servers that have already been deployed into a production environment?
-* How do you consistently deploy infrastructure to multiple Regions in disparate geographical locations?
+* How do you consistently deploy infrastructure to multiple regions? 
 * How do you roll back a deployment that did not run according to plan? 
 * How do you test and debug a deployment before you roll it out to production?
 
