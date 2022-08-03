@@ -24,7 +24,6 @@ title: AWS Trusted Advisor
 
 # What you will Learn 
 
-<!-- global-top.vue -->
 
 <v-clicks>
 
@@ -144,7 +143,7 @@ title: AWS Trusted Advisor
 
 * AWS Trusted Advisor is an online tool that provides real-time guidance to help you provision, optimize, and secure your resources by following AWS best practices.
 * Examples of Trusted Advisor security checks and advice include:    
-  - Making sure that security groups do not keep ports open with unrestricted access.
+  - Make sure that security groups do not keep ports open with unrestricted access.
   - Checking for your use of AWS Identity and Access Management (IAM) permissions to control access to AWS resources.
   - Checking the root account and warning if multi-factor authentication (MFA) is not enabled.
   - Checking that logging is enabled on Amazon Simple Storage Service (Amazon S3) buckets
