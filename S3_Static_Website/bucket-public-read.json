@@ -5,13 +5,10 @@
             "Sid": "PublicRead",
             "Effect": "Allow",
             "Principal": "*",
-            "Action": [
-                "s3:GetObject",
-                "s3:GetObjectVersion"
-            ],
-            "Resource": [
-                "arn:aws:s3:::hiit-s3-website-2023/*"
-            ]
+            "Action": ["s3:GetObject"],
+            "Resource": ["arn:aws:s3:::b19-web-bucket-2456/*"]
         }
     ]
 }
+
+

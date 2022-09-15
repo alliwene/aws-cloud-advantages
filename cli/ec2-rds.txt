@@ -24,19 +24,19 @@ aws ec2 run-instances --image-id resolve:ssm:/aws/service/ami-amazon-linux-lates
 
 image-id: 
 
-vpc-id: vpc-0e7d3dfa504a9f548
+vpc-id: 
 
-IGW: igw-0151d2d1195d52cbc
+IGW: 
 
-route table: rtb-07f14fcc4dbaf1278 
+route table:  
 
-public subnet: subnet-00f13c47d669723d0
+public subnet: 
 
-private subnet: subnet-0ab82904a3a2b1188
+private subnet: 
 
-security group: sg-08d48a4ed5792b804
+security group: 
 
-instanceid: i-0b977cb8b0110feab
+instanceid: 
 
 subnet rds: 
 

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2.2",
-  "description": "Install Dashboard App",
+  "description": "Install Web Dashboard App",
   "mainSteps": [
     {
       "inputs": {
